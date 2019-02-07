@@ -22,5 +22,8 @@
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "gentelella": "*"
+    },
+    "dependencies": {
+        "webpack": "^4.29.3"
     }
 }
