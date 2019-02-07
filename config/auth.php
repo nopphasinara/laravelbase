@@ -71,6 +71,11 @@ return [
         ],
 
         // 'users' => [
+        //     'driver' => 'corcel',
+        //     'model' => Corcel\Model\User::class,
+        // ],
+
+        // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],

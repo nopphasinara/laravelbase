@@ -165,6 +165,11 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
+        Plank\Mediable\MediableServiceProvider::class,
+        Corcel\Laravel\CorcelServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -223,6 +228,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'MediaUploader' => Plank\Mediable\MediaUploaderFacade::class,
 
     ],
 
