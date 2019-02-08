@@ -11,23 +11,6 @@
 |
 */
 
-Route::group([
-  'prefix' => 'test',
-], function () {
-  Route::get('/', [
-    'as' => 'test.index',
-    'uses' => 'TestController@index',
-  ]);
-
-  Route::get('/flash', [
-    'as' => 'test.flash',
-    'uses' => 'TestController@index',
-  ]);
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
