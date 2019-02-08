@@ -1,11 +1,33 @@
-<footer class="main-footer">
-  <div class="footer-top text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-      <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.2/getting-started/introduction/">getting started guide</a>.</p>
-    </div>
+<div class="row d-flex flex-row justify-content-between align-items-start">
+  <div class="col-12 col-md-auto">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link">
+                Footer Link 1
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link">
+                Footer Link 2
+            </a>
+        </li>
+    </ul>
   </div>
-</footer>
+  <div class="col-12 col-md-auto">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link">
+                Footer Link 3
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link">
+                <div class="badge badge-success mr-1 ml-0">
+                    <small>NEW</small>
+                </div>
+                Footer Link 4
+            </a>
+        </li>
+    </ul>
+  </div>
+</div>
