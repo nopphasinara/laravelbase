@@ -46483,10 +46483,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./resources/dashboard/js/app.js":
+/*!***************************************!*\
+  !*** ./resources/dashboard/js/app.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -46495,7 +46495,7 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // window.Vue = require('vue');
+__webpack_require__(/*! ./bootstrap */ "./resources/dashboard/js/bootstrap.js"); // window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -46515,16 +46515,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // window
  */
 
 
-var app = {}; // const app = new Vue({
-//     el: '#app'
-// });
+var app = {};
 
 /***/ }),
 
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
+/***/ "./resources/dashboard/js/bootstrap.js":
+/*!*********************************************!*\
+  !*** ./resources/dashboard/js/bootstrap.js ***!
+  \*********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -46540,7 +46538,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 try {
   window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js").default;
-  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); // window.Holderjs = require('holderjs');
+  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
@@ -46584,10 +46582,10 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/dashboard/sass/app.scss":
+/*!*******************************************!*\
+  !*** ./resources/dashboard/sass/app.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -46596,14 +46594,14 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*********************************************************************************!*\
+  !*** multi ./resources/dashboard/js/app.js ./resources/dashboard/sass/app.scss ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/dashboard/js/app.js */"./resources/dashboard/js/app.js");
+module.exports = __webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/dashboard/sass/app.scss */"./resources/dashboard/sass/app.scss");
 
 
 /***/ })
