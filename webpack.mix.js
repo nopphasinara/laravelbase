@@ -14,5 +14,5 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css');
 
-mix.js('resources/packages/bootstrap/js/src/index.js', 'public/vendor/dashboard/js');
-mix.sass('resources/packages/bootstrap/scss/app.scss', 'public/vendor/dashboard/css');
+mix.js('resources/vendor/dashboard/js/app.js', 'public/vendor/dashboard/js');
+mix.sass('resources/vendor/dashboard/scss/app.scss', 'public/vendor/dashboard/css');
