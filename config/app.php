@@ -165,7 +165,16 @@ return [
         /*
          * Package Service Providers...
          */
+        Corcel\Laravel\CorcelServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        /*
+        php artisan baum:install MODEL
+        php artisan migrate
+        */
+        Baum\Providers\BaumServiceProvider::class,
+        Plank\Mediable\MediableServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -226,6 +235,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'MediaUploader' => Plank\Mediable\MediaUploaderFacade::class,
 
     ],
 
