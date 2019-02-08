@@ -23,6 +23,6 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view('pages.test');
+        return view('dashboard.layout');
     }
 }
