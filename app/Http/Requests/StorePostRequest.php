@@ -23,13 +23,21 @@ class StorePostRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'title' => 'required|max:200',
-            'body' => 'required',
-            'tags' => 'required|array|max:10',
-            'is_published' => 'required|boolean',
-            'author_name' => 'required',
+      $rules = [
+          'title' => 'required|max:200',
+          'body' => 'required',
+          'tags' => 'required|array|max:10',
+          'is_published' => 'required|boolean',
+          'author_name' => 'required',
+      ];
+
+      if ($this->getMethod() == 'POST') {
+        $rules += [
+          'password' => 'unique:posts,slug',
         ];
+      }
+
+        return $rules;
     }
 
     /**
