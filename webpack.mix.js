@@ -13,6 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css');
-
+// Dashboard setup
 mix.js('resources/vendor/dashboard/js/app.js', 'public/vendor/dashboard/js');
 mix.sass('resources/vendor/dashboard/scss/app.scss', 'public/vendor/dashboard/css');
