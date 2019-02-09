@@ -24,11 +24,16 @@
         "vue-template-compiler": "^2.6.3"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.14",
+        "@fortawesome/free-brands-svg-icons": "^5.7.1",
+        "@fortawesome/free-regular-svg-icons": "^5.7.1",
+        "@fortawesome/free-solid-svg-icons": "^5.7.1",
         "autoprefixer": "^9.4.7",
         "laravel-echo": "^1.5.2",
         "postcss-cli": "^6.1.1",
         "pusher-js": "^4.3.1",
         "slimscroll": "^0.9.1",
+        "sweetalert2": "^8.0.6",
         "webpack": "^4.29.3"
     }
 }

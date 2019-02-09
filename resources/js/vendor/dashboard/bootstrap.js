@@ -1,4 +1,13 @@
 
+// import swal from 'sweetalert2';
+// import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+// import { far } from '@fortawesome/free-regular-svg-icons';
+// import { fas } from '@fortawesome/free-solid-svg-icons';
+//
+// library.add(fab, far, fas);
+// dom.watch();
+
 window._ = require('lodash');
 
 /**
@@ -8,11 +17,10 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    window.Popper = require('popper.js').default;
 
     require('../../../packages/bootstrap/js/src/index.js');
-    // require('bootstrap');
 } catch (e) {}
 
 /**

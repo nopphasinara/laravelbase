@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -42224,6 +42224,90 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/vendor/dashboard/app.js":
+/*!**********************************************!*\
+  !*** ./resources/js/vendor/dashboard/app.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var app = {};
+
+__webpack_require__(/*! ./bootstrap.js */ "./resources/js/vendor/dashboard/bootstrap.js");
+
+/***/ }),
+
+/***/ "./resources/js/vendor/dashboard/bootstrap.js":
+/*!****************************************************!*\
+  !*** ./resources/js/vendor/dashboard/bootstrap.js ***!
+  \****************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var laravel_echo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js");
+// import swal from 'sweetalert2';
+// import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+// import { far } from '@fortawesome/free-regular-svg-icons';
+// import { fas } from '@fortawesome/free-solid-svg-icons';
+//
+// library.add(fab, far, fas);
+// dom.watch();
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js").default;
+
+  __webpack_require__(/*! ../../../packages/bootstrap/js/src/index.js */ "./resources/packages/bootstrap/js/src/index.js");
+} catch (e) {}
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+
+
+window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
+window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  broadcaster: 'pusher',
+  key: "",
+  cluster: "mt1",
+  encrypted: true
+});
+
+/***/ }),
+
 /***/ "./resources/packages/bootstrap/js/src/alert.js":
 /*!******************************************************!*\
   !*** ./resources/packages/bootstrap/js/src/alert.js ***!
@@ -46987,94 +47071,26 @@ setTransitionEndSupport();
 
 /***/ }),
 
-/***/ "./resources/vendor/dashboard/js/app.js":
-/*!**********************************************!*\
-  !*** ./resources/vendor/dashboard/js/app.js ***!
-  \**********************************************/
+/***/ "./resources/sass/vendor/dashboard/app.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/vendor/dashboard/app.scss ***!
+  \**************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(/*! ./bootstrap.js */ "./resources/vendor/dashboard/js/bootstrap.js");
-
-var app = {};
-$(document).ready(function () {
-  alert('OK');
-});
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ "./resources/vendor/dashboard/js/bootstrap.js":
-/*!****************************************************!*\
-  !*** ./resources/vendor/dashboard/js/bootstrap.js ***!
-  \****************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var laravel_echo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js");
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js").default;
-  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-  __webpack_require__(/*! ../../../packages/bootstrap/js/src/index.js */ "./resources/packages/bootstrap/js/src/index.js"); // require('bootstrap');
-
-} catch (e) {}
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-
-
-window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
-window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  broadcaster: 'pusher',
-  key: "",
-  cluster: "mt1",
-  encrypted: true
-});
-
-/***/ }),
-
-/***/ 1:
-/*!****************************************************!*\
-  !*** multi ./resources/vendor/dashboard/js/app.js ***!
-  \****************************************************/
+/***/ 0:
+/*!***********************************************************************************************!*\
+  !*** multi ./resources/js/vendor/dashboard/app.js ./resources/sass/vendor/dashboard/app.scss ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/vendor/dashboard/js/app.js */"./resources/vendor/dashboard/js/app.js");
+__webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/js/vendor/dashboard/app.js */"./resources/js/vendor/dashboard/app.js");
+module.exports = __webpack_require__(/*! /Users/sudprawat/www/laravelbase.local/resources/sass/vendor/dashboard/app.scss */"./resources/sass/vendor/dashboard/app.scss");
 
 
 /***/ })

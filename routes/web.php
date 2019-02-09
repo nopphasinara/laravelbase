@@ -11,6 +11,19 @@
 |
 */
 
+Route::group([
+  'prefix' => 'dashboard',
+  'name' => 'dashboard.',
+], function () {
+  Route::get('{pagename?}', function ($pagename = '') {
+    if (empty($pagename)) {
+      $pagename = 'home';
+    }
+
+    return view(dashboard_views('pages.'. $pagename .''));
+  })->name('starter');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
