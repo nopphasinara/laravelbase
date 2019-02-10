@@ -29,7 +29,7 @@
   @includeif(dashboard_views('includes.footer'))
 
   @stack('before-scripts')
-  <script src="{{ asset(dashboard_js('app.js')) }}" async crossorigin="anonymous"></script>
+  <script src="{{ asset(dashboard_js('app.js')) }}" crossorigin="anonymous"></script>
   @stack('after-scripts')
 </body>
 </html>
