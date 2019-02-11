@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "39ccc95ed2242ace3f44250a6e4b3fd7",
@@ -118,16 +118,16 @@
         },
         {
             "name": "calebporzio/awesome-helpers",
-            "version": "v1.2",
+            "version": "v1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/calebporzio/awesome-helpers.git",
-                "reference": "05e25a687ef9d18887516ce3dce35cf3ee7f4bcf"
+                "reference": "0ee984993548ff08d5c5664d91cb5fa537445e5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/calebporzio/awesome-helpers/zipball/05e25a687ef9d18887516ce3dce35cf3ee7f4bcf",
-                "reference": "05e25a687ef9d18887516ce3dce35cf3ee7f4bcf",
+                "url": "https://api.github.com/repos/calebporzio/awesome-helpers/zipball/0ee984993548ff08d5c5664d91cb5fa537445e5d",
+                "reference": "0ee984993548ff08d5c5664d91cb5fa537445e5d",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
                 "awesome-helpers",
                 "calebporzio"
             ],
-            "time": "2019-02-01T22:11:16+00:00"
+            "time": "2019-02-09T16:04:19+00:00"
         },
         {
             "name": "corcel/acf",
