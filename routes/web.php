@@ -12,6 +12,23 @@
 */
 
 Route::group([
+  'prefix' => 'views',
+  'name' => 'views.',
+], function () {
+  Route::get('{viewname?}', function ($viewname = '') {
+    if (empty($viewname)) {
+      return 'Please enter viewname.';
+    }
+    if (!view()->exists(dashboard_views('views.' . $viewname))) {
+      return abort(404);
+    }
+    return view(dashboard_views('pages.views'))->with([
+      'viewname' => $viewname,
+    ]);
+  });
+});
+
+Route::group([
   'prefix' => 'dashboard',
   'name' => 'dashboard.',
 ], function () {
