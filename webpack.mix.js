@@ -11,11 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.scss', 'public/css');
 
-mix.js('resources/js/dashboard/app.js', 'public/js/dashboard')
-   .sass('resources/sass/dashboard/app.scss', 'public/css/dashboard');
+// mix.js('resources/vendor/dashboard/js/app.js', 'public/js/dashboard')
+//    .sass('resources/vendor/dashboard/sass/app.scss', 'public/css/dashboard');
 
 // mix.js('resources/dashboard/js/bootstrap.js', 'public/dashboard/js');
 // mix.sass('resources/dashboard/sass/bootstrap.scss', 'public/dashboard/css');
