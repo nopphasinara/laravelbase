@@ -1,4 +1,4 @@
 {
-    "/vendor/dashboard/js/app.js": "/vendor/dashboard/js/app.js",
-    "/vendor/dashboard/css/app.css": "/vendor/dashboard/css/app.css"
+    "/vendor/ui/js/bootstrap.js": "/vendor/ui/js/bootstrap.js",
+    "/vendor/ui/css/bootstrap.css": "/vendor/ui/css/bootstrap.css"
 }
