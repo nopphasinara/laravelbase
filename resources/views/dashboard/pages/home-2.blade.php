@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Hello, world!</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="msapplication-tap-highlight" content="no">
-  @yield('after-meta')
-  @stack('before-styles')
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.css') }}">
-  @stack('after-styles')
-</head>
-<body>
+@extends('dashboard.layouts.app-2')
+
+@section('content')
   <!-- Sidenav -->
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
@@ -626,14 +612,4 @@
       </footer>
     </div>
   </div>
-
-  @stack('before-scripts')
-  <script src="{{ asset('dashboard/js/bootstrap.js') }}" crossorigin="anonymous"></script>
-  {{-- <script src="./assets/vendor/jquery/dist/jquery.min.js"></script> --}}
-  {{-- <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script> --}}
-  {{-- <script src="./assets/vendor/chart.js/dist/Chart.min.js"></script> --}}
-  {{-- <script src="./assets/vendor/chart.js/dist/Chart.extension.js"></script> --}}
-  {{-- <script src="./assets/js/argon.js?v=1.0.0"></script> --}}
-  @stack('after-scripts')
-</body>
-</html>
+@endsection

@@ -22,7 +22,7 @@ Route::group([
     }
 
     $pagename = str_start(str_finish($pagename, ''), '');
-    $viewpath = 'vendor.dashboard.pages.'. $pagename .'';
+    $viewpath = 'dashboard.pages.'. $pagename .'';
 
     if (view()->exists($viewpath)) {
       return view($viewpath);
