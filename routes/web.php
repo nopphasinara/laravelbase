@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Contracts\Session\Session;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +21,36 @@ Route::group([
       $pagename = 'home';
     }
 
-    $viewpath = '';
+    $pagename = str_start(str_finish($pagename, ''), '');
+    $viewpath = 'vendor.dashboard.pages.'. $pagename .'';
 
-    echo '<pre>'; print_r(app()); echo '</pre>';
+    if (view()->exists($viewpath)) {
+      return view($viewpath);
+    }
+    return abort(404);
 
+
+    // echo '<pre>'; print_r(get_class_methods(view())); echo '</pre>';
+
+    // echo '<pre>'; print_r(app()->getNamespace()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->getDeferredServices()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->getLoadedProviders()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->abort(403)); echo '</pre>';
+    // echo '<pre>'; print_r(app()->isBooted()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->isLocal()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->environment()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->environmentFilePath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->environmentFile()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->environmentPath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->resourcePath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->storagePath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->publicPath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->langPath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->databasePath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->configPath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->bootstrapPath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->basePath()); echo '</pre>';
+    // echo '<pre>'; print_r(app()->path()); echo '</pre>';
     // echo '<pre>'; print_r(get_class_methods(app())); echo '</pre>';
 
     // echo '<pre>'; print_r($session->handlerNeedsRequest()); echo '</pre>';
