@@ -11,6 +11,26 @@
 |
 */
 
+Route::group([
+  'prefix' => 'demo',
+  'as' => 'demo.',
+], function () {
+  Route::get('{viewname?}', function ($viewname = '') {
+    request()->route()->name($viewname);
+
+    if (empty($viewname)) {
+      return 'please select viewname.';
+    }
+
+    if (view()->exists('vendor.dashboard.demo.'. $viewname .'')) {
+      return view('vendor.dashboard.demo.'. $viewname .'');
+    }
+    return abort(404);
+  })->where([
+    'name' => '[0-9a-zA-Z\.\-\_]+',
+  ]);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
