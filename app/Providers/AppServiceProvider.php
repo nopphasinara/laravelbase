@@ -25,11 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $value = [
-          'container' => 'Binding Basics',
-        ];
-        $this->app->when('App\Http\Controllers\HomeController')
-          ->needs('$variableName')
-          ->give($value);
+        //
     }
 }
