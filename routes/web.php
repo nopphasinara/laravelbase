@@ -24,15 +24,18 @@ Route::group([
     }
 
     $viewpath = '';
-    $session = session();
 
-    echo '<pre>'; print_r($session->handlerNeedsRequest()); echo '</pre>';
-    echo '<pre>'; print_r($session->getHandler()); echo '</pre>';
-    echo '<pre>'; print_r($session->token()); echo '</pre>';
-    echo '<pre>'; print_r($session->setPreviousUrl('https://google.com')); echo '</pre>';
-    echo '<pre>'; print_r($session->previousUrl()); echo '</pre>';
-    echo '<pre>'; print_r($session->getId()); echo '</pre>';
-    echo '<pre>'; print_r($session->getName()); echo '</pre>';
+    echo '<pre>'; print_r(app()); echo '</pre>';
+
+    // echo '<pre>'; print_r(get_class_methods(app())); echo '</pre>';
+
+    // echo '<pre>'; print_r($session->handlerNeedsRequest()); echo '</pre>';
+    // echo '<pre>'; print_r($session->getHandler()); echo '</pre>';
+    // echo '<pre>'; print_r($session->token()); echo '</pre>';
+    // echo '<pre>'; print_r($session->setPreviousUrl('https://google.com')); echo '</pre>';
+    // echo '<pre>'; print_r($session->previousUrl()); echo '</pre>';
+    // echo '<pre>'; print_r($session->getId()); echo '</pre>';
+    // echo '<pre>'; print_r($session->getName()); echo '</pre>';
     // echo '<pre>'; print_r(get_class_methods(Session::class)); echo '</pre>';
 
     // echo '<pre>'; print_r($route->hasParameter('pagename')); echo '</pre>';
