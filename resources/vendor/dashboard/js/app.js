@@ -1,3 +1,3 @@
 
-require('~resources/vendor/bootstrap/js/src/index.js');
-require('../../chartist');
+require('resources/vendor/bootstrap');
+require('resources/vendor/chartist');
