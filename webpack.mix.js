@@ -14,5 +14,11 @@ const mix = require('laravel-mix');
 // mix.js('resources/js/app.js', 'public/js')
 //    .sass('resources/sass/app.scss', 'public/css');
 
-mix.js('resources/vendor/dashboard/js/app.js', 'public/vendor/dashboard/js')
-   .sass('resources/vendor/dashboard/sass/app.scss', 'public/vendor/dashboard/css');
+mix.js('resources/dashboard/js/bootstrap.js', 'public/dashboard/js');
+mix.sass('resources/dashboard/sass/bootstrap.scss', 'public/dashboard/css');
+
+// mix.js('resources/vendor/dashboard/js/bootstrap.js', 'public/vendor/ui/js');
+// mix.sass('resources/views/vendor/ui/sass/bootstrap.scss', 'public/vendor/ui/css');
+
+// mix.js('resources/vendor/dashboard/js/app.js', 'public/vendor/dashboard/js')
+//    .sass('resources/vendor/dashboard/sass/app.scss', 'public/vendor/dashboard/css');

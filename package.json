@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.5"
     },
     "dependencies": {
+        "chartjs": "^0.3.24",
         "holderjs": "^2.9.6",
         "webpack": "^4.29.3",
         "webpack-cli": "^3.2.3"
