@@ -19,10 +19,10 @@ Route::group([
     if (empty($viewname)) {
       return 'Please enter viewname.';
     }
-    if (!view()->exists(dashboard_views('views.' . $viewname))) {
+    if (!view()->exists('vendor.dashboard.pages.'. $viewname .'')) {
       return abort(404);
     }
-    return view(dashboard_views('pages.views'))->with([
+    return view('vendor.dashboard.pages.'. $viewname .'')->with([
       'viewname' => $viewname,
     ]);
   });
